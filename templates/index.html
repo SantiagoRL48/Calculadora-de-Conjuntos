@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conjuntos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Conjuntos</h1>
+        <div class="set-inputs">
+            <label>Conjunto A: <input type="text" id="set1" placeholder="Ejemplo: 1,3,a,c" value="1,3,5,7,9"></label>
+            <label>Conjunto B: <input type="text" id="set2" placeholder="Ejemplo: 2,4,b,d" value="2,4,6,8,10"></label>
+            <label>Conjunto C: <input type="text" id="set3" placeholder="Ejemplo: a,b,5,6" value="a,b,5,6"></label>
+        </div>
+        <div class="expression">
+            <label>Expresión: 
+                <input type="text" id="expression" placeholder="Ejemplo: (A ∪ B) ∩ C" value="(A ∩ B) ∩ C" oninput="calculate()">
+            </label>
+            <div class="operator-buttons">
+                <button onclick="insertOperator('(')">(</button>
+                <button onclick="insertOperator(')')">)</button>
+                <button onclick="insertOperator('∪')">∪</button>
+                <button onclick="insertOperator('∩')">∩</button>
+                <button onclick="insertOperator('-')">-</button>
+                <button onclick="insertOperator('/C')">/C</button>
+                <button onclick="insertOperator('∆')">∆</button>
+            </div>
+            <p class="expression-note">Usa A, B, C y operadores: ∪ (unión), ∩ (intersección), - (diferencia), /C (complemento), ∆ (simetría). Usa paréntesis para indicar el orden, por ejemplo: (A ∩ B) ∩ C</p>
+        </div>
+        <div class="options">
+            <label><input type="checkbox" id="sortOutput" checked> Mostrar resultado ordenado</label>
+        </div>
+        <div class="result" id="result-container">
+            <p id="result-text">{1,3,5,7,9} ∩ {2,4,6,8,10} ∩ {a,b,5,6} = {5}</p>
+            <p id="result-note" class="note"></p>
+        </div>
+        <div class="buttons">
+            <button onclick="sortSets()">Ordenar</button>
+            <button onclick="swapSets()">Intercambiar conjuntos</button>
+            <button onclick="loadExample()">Ejemplo</button>
+            <button onclick="exportResult()">Exportar resultado</button>
+        </div>
+        <!-- <footer>
+            <p>© 2025 Calculadora de Conjuntos</p>
+        </footer> -->
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
