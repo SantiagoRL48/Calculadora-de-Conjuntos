@@ -14,8 +14,8 @@ Utiliza **Flask** como frontend y backend.
 ## 🚀 Como probar nuestro generador
 A continuacion se dejan las instrucciones para ejecutar nuestro proyecto:
 
-O si bien prefieres puedes visitar la siguiente web::
-👉 Aqui va la url de vercel
+O si bien prefieres puedes visitar la siguiente web:
+👉 https://calculadora-de-conjuntos.vercel.app/
 
 Asegúrate de tener instalados los siguientes programas:
 
