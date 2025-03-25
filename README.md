@@ -96,7 +96,7 @@ Puedes abrirlo en tu navegador:
 
 ## Página de destino
 
-![](demo.png)
+![](demo1.png)
 
 ### **Desarrollo**  
 ¿Quieres contribuir? ¡Genial!  
